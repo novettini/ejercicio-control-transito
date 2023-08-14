@@ -4,6 +4,7 @@ input_test = document.querySelector("#input-test");
 input_excusa = document.querySelector("#input-excusa");
 input_submit = document.querySelector("#input-submit");
 label_test = document.querySelector("#test-alcoholemia");
+div_formulario = document.querySelector(".formulario");
 
 gramos_por_litro = Math.random() * 3;
 gramos_por_litro = gramos_por_litro.toFixed(2);
@@ -16,7 +17,23 @@ function test_alcoholemia() {
   label_test.appendChild(parrafo_gramos_por_litro); //metemos el elemento en el documento
 }
 
+function mostrar_resultado(aprobado){
+    resultado = document.createElement("h2")
+    if (aprobado){
+        resultado.innerHTML = "Podes manejar"
+        div_formulario.classList.add("aprobado")
+    }
+    else{
+        resultado.innerHTML = "No podes manejar"
+        div_formulario.classList.add("desaprobado")
+    }
+    div_formulario.appendChild(resultado)
+}
+
 function chequear_idoneidad(){
+    input_submit.remove()
+    año = input_fecha.value.split("-")[0]
+    vehiculo = input_vehiculo.value
     
 }
 

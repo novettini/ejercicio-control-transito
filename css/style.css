@@ -27,3 +27,10 @@ select{
     background-color:cadetblue;
     padding: 2%;
 }
+
+.aprobado{
+    background-color: green;
+}
+.desaprobado{
+    background-color: red;
+}
